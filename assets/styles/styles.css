@@ -1,1 +1,19 @@
+:root {
+  --cl-black: #111111;
+  --cl-white: #ffffff;
+  --cl-yellow: #F4D04E;
+  --cl-grey: #7F7F7F;
+  --ty-heading: 800 1.25rem/1.5 'Figtree', serif;
+  --ty-body: 500 0.875rem/1.5 'Figtree', serif;
+  --ty-body-small: 500 0.75rem/1.5 'Figtree', serif;
+  --ty-body-small-bold: 800 0.75rem/1.5 'Figtree', serif;
+}
+@media (min-width: 60rem) {
+  :root {
+    --ty-heading: 800 1.5rem/1.5 'Figtree', serif;
+    --ty-body: 500 1rem/1.5 'Figtree', serif;
+    --ty-body-small: 500 0.875rem/1.5 'Figtree', serif;
+    --ty-body-small-bold: 800 0.875rem/1.5 'Figtree', serif;
+  }
+}
 /*# sourceMappingURL=./styles.css.map */
