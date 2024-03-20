@@ -18,3 +18,41 @@
 		--ty-body-small-bold: 800 .875rem/1.5 'Figtree', serif;
 	}
 }
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+}
+
+.top-wrapper {
+	font: var(--ty-body);
+	color: var(--cl-black);
+	background: var(--cl-yellow);
+}
+
+.preview-card {
+	width: 90%;
+	max-width: 20.438rem;
+	margin: auto;
+	padding: 1.5rem;
+	border: solid thin var(--cl-black) ;
+	border-radius: 1.125rem;
+	background: var(--cl-white);
+	filter: drop-shadow(8px 8px #000);
+}
