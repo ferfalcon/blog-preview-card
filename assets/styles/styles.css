@@ -1,19 +1,21 @@
 :root {
-  --cl-black: #111111;
-  --cl-white: #ffffff;
-  --cl-yellow: #F4D04E;
-  --cl-grey: #7F7F7F;
-  --ty-heading: 800 1.25rem/1.5 'Figtree', serif;
-  --ty-body: 500 0.875rem/1.5 'Figtree', serif;
-  --ty-body-small: 500 0.75rem/1.5 'Figtree', serif;
-  --ty-body-small-bold: 800 0.75rem/1.5 'Figtree', serif;
+  --ff-main: 'Figtree', serif;
+  --ty-heading: 800 1.25rem/1.5 var(--ff-main);
+  --ty-body: 500 0.875rem/1.5 var(--ff-main);
+  --ty-body-small: 500 0.75rem/1.5 var(--ff-main);
+  --ty-body-small-bold: 800 0.75rem/1.5 var(--ff-main);
+  --cl-neutral-100: hsl(0, 0%, 100%);
+  --cl-neutral-500: hsl(0, 0%, 50%);
+  --cl-neutral-800: hsl(0, 0%, 7%);
+  --cl-neutral-900: hsl(0, 0%, 0%);
+  --cl-accent: #F4D04E;
 }
 @media (min-width: 60rem) {
   :root {
-    --ty-heading: 800 1.5rem/1.5 'Figtree', serif;
-    --ty-body: 500 1rem/1.5 'Figtree', serif;
-    --ty-body-small: 500 0.875rem/1.5 'Figtree', serif;
-    --ty-body-small-bold: 800 0.875rem/1.5 'Figtree', serif;
+    --ty-heading: 800 1.5rem/1.5 var(--ff-main);
+    --ty-body: 500 1rem/1.5 var(--ff-main);
+    --ty-body-small: 500 0.875rem/1.5 var(--ff-main);
+    --ty-body-small-bold: 800 0.875rem/1.5 var(--ff-main);
   }
 }
 html {
@@ -32,16 +34,12 @@ img {
 }
 .body {
   font: var(--ty-body);
-  color: var(--cl-black);
-  background: var(--cl-yellow);
+  color: var(--cl-neutral-800);
+  background: var(--cl-accent);
   display: grid;
   align-content: center;
   min-height: 100svh;
   margin: 0;
-  background: url(../../design/Desktop.png) top center no-repeat;
-}
-main {
-  opacity: 0.25;
 }
 .preview-card {
   display: grid;
@@ -49,10 +47,10 @@ main {
   max-width: 20.438rem;
   margin: auto;
   padding: 1.5rem 1.5rem 1rem;
-  border: solid thin var(--cl-black);
+  border: solid thin var(--cl-neutral-800);
   border-radius: 1.125rem;
-  background: var(--cl-white);
-  filter: drop-shadow(8px 8px #000);
+  background: var(--cl-neutral-100);
+  filter: drop-shadow(0.5rem 0.5rem var(--cl-neutral-900));
   transition: max-width 0.2s ease-in;
 }
 @media (min-width: 60rem) {
@@ -66,7 +64,7 @@ main {
 }
 .preview-card__tag {
   font: var(--ty-body-small-bold);
-  background: var(--cl-yellow);
+  background: var(--cl-accent);
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   width: fit-content;
@@ -85,7 +83,7 @@ main {
   margin-block: 0.75rem 0;
 }
 .preview-card__title:hover {
-  color: var(--cl-yellow);
+  color: var(--cl-accent);
 }
 .preview-card__title-link {
   color: inherit;
@@ -93,7 +91,7 @@ main {
 }
 .preview-card__copy {
   font: var(--ty-body);
-  color: var(--cl-grey);
+  color: var(--cl-neutral-500);
   order: 4;
   margin-block: 0.75rem 0;
 }
