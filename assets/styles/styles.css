@@ -30,7 +30,7 @@ img {
   vertical-align: middle;
   font-style: italic;
 }
-.top-wrapper {
+.body {
   font: var(--ty-body);
   color: var(--cl-black);
   background: var(--cl-yellow);
@@ -41,7 +41,6 @@ img {
 }
 .preview-card {
   display: grid;
-  gap: 1.5rem;
   width: 90%;
   max-width: 20.438rem;
   margin: auto;
@@ -58,28 +57,28 @@ img {
   }
 }
 .preview-card__image {
+  order: 0;
   border-radius: 0.625rem;
 }
-.preview-card__main-text {
-  display: grid;
-  gap: 0.75rem;
-}
 .preview-card__tag {
-  margin: 0;
   font: var(--ty-body-small-bold);
   background: var(--cl-yellow);
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   width: fit-content;
+  order: 1;
+  margin-block: 1.5rem 0;
 }
 .preview-card__date {
-  margin: 0;
   font: var(--ty-body-small);
+  order: 2;
+  margin-block: 0.75rem 0;
 }
 .preview-card__title {
-  margin: 0;
   font: var(--ty-heading);
   transition: color 0.2s ease-in;
+  order: 3;
+  margin-block: 0.75rem 0;
 }
 .preview-card__title:hover {
   color: var(--cl-yellow);
@@ -89,14 +88,17 @@ img {
   text-decoration: none;
 }
 .preview-card__copy {
-  margin: 0;
   font: var(--ty-body);
   color: var(--cl-grey);
+  order: 4;
+  margin-block: 0.75rem 0;
 }
 .preview-card__author {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  order: 5;
+  margin-block: 1.5rem 0;
 }
 .preview-card__author-image {
   width: 2rem;
@@ -113,4 +115,3 @@ img {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-/*# sourceMappingURL=./styles.css.map */
